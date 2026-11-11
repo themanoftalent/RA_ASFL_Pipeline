@@ -1,4 +1,4 @@
-"""Summarize real experiment outputs without filling missing runs."""
+"""Summarize completed experiments."""
 import argparse
 import csv
 from pathlib import Path
