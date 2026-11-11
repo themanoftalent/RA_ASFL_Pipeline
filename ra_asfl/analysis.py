@@ -1,4 +1,4 @@
-"""Post-hoc analyses computed only from actual experimental outputs."""
+"""Analyze completed experiments."""
 import json
 from pathlib import Path
 import numpy as np
