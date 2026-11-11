@@ -1,8 +1,4 @@
-"""Optional empirical attack diagnostics; do not interpret as differential privacy.
-
-Reconstruction attacks need auxiliary raw signals accessible to the evaluator.
-This module never claims that activation clipping is end-to-end DP.
-"""
+"""Evaluate reconstruction and membership attacks on shared features."""
 import numpy as np
 import torch
 from torch import nn
@@ -28,7 +24,7 @@ class ReconstructionDecoder(nn.Module):
 
 def train_reconstruction_decoder(auxiliary_activations, auxiliary_signals,
                                  epochs=100, batch_size=64, lr=0.001, device='cpu'):
-    """Fit only on an auxiliary population disjoint from target-model members."""
+    """Train the decoder on separate auxiliary samples."""
     x = torch.as_tensor(auxiliary_activations, dtype=torch.float32, device=device)
     y = torch.as_tensor(auxiliary_signals, dtype=torch.float32, device=device)
     if y.shape[1] != 1:
@@ -58,7 +54,7 @@ def reconstruction_metrics(reference, reconstruction):
 
 
 def membership_attack(train_features, train_membership, test_features, test_membership):
-    """Evaluate a separately fitted attack classifier on a disjoint attack test set."""
+    """Evaluate membership inference on held-out samples."""
     clf = LogisticRegression(max_iter=1000)
     clf.fit(np.asarray(train_features), np.asarray(train_membership))
     prob = clf.predict_proba(np.asarray(test_features))[:, 1]
