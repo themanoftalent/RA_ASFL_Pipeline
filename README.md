@@ -1,9 +1,5 @@
 # Reliability-Aware Adaptive Split Federated Learning with Uncertainty-Guided Personalization for Non-Independent and Non-Identically Distributed Electrocardiogram Classification in Internet of Medical Things Networks
 
-## About
-
-*No description, website, or topics provided.*
-
 This project examines how medical devices and healthcare institutions can train an electrocardiogram classifier together while keeping their recordings at their own locations. The training procedure adjusts the division of work between each client and the server. It also considers signal quality, prediction uncertainty, and the stability of local updates when combining models.
 
 The code runs experiments in Python using simulated clients and network conditions. It is intended for research, not clinical use or deployment on medical devices.
