@@ -1,4 +1,4 @@
-"""Prediction metrics. Undefined AUROCs remain missing, not imputed."""
+"""Calculate classification metrics."""
 import numpy as np
 from sklearn.metrics import (accuracy_score, f1_score, precision_score, recall_score,
                              balanced_accuracy_score, roc_auc_score, average_precision_score,
