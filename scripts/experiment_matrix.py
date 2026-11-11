@@ -1,4 +1,4 @@
-"""Launch a matched-seed method comparison or a controlled component removal."""
+"""Run methods with matched random seeds."""
 import argparse
 import copy
 from pathlib import Path
