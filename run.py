@@ -1,4 +1,4 @@
-"""Command-line entry point for a single experiment."""
+"""Run one experiment."""
 import argparse
 import json
 from pathlib import Path
