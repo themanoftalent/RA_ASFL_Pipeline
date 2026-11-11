@@ -68,3 +68,7 @@ Consequently, numerical comparisons should be produced by actually executing the
 The benchmark experiments use public ECG datasets and simulated IoMT environments. The software is not a medical device. Keeping raw inputs within logical clients does not ensure privacy against reconstruction, membership inference, or disclosure through gradients and model updates. Conditional mathematical analysis of a Gaussian activation channel must not be interpreted as an end-to-end differential privacy guarantee.
 
 The data remain with their original custodians. Consult the PhysioNet pages above for dataset descriptions, licensing and access conditions.
+
+## License
+
+The source code is available under the [MIT License](LICENSE.md). MIT-BIH and PTB-XL remain under their respective PhysioNet terms. The license does not cover the datasets, which are not included in this repository.
