@@ -1,4 +1,4 @@
-"""Audit completed experiment files without creating measurements."""
+"""Check saved experiment results."""
 import argparse
 import json
 import math
