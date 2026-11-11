@@ -1,4 +1,4 @@
-"""Check the official data landing pages without downloading ECG records."""
+"""Check dataset links without downloading files."""
 import argparse
 import json
 from datetime import datetime, timezone
